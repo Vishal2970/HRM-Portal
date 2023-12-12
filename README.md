@@ -7,6 +7,9 @@ This project is a web reporting application that allows users to access and view
 - **User Authentication:** Secure user authentication system for accessing web reports.
 - **Web Report Access:** Users can view their web reports after logging in.
 
+## Login Page
+![image](https://github.com/Vishal2970/Web_report-portal/assets/96405876/d25fb540-e487-468e-a347-5cb961af659f)
+
 ## Technologies Used
 
 - **Frontend:** React
