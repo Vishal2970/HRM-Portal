@@ -5,16 +5,54 @@ const LoginPage = () => {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
 
-  const handleSubmit = (e) => {
+  // const handleSubmit = async (e) => {
+  //   e.preventDefault();
+  
+  //   try {
+  //     const response = await fetch('http://localhost:5000/api/login', {
+  //       method: 'POST',
+  //       headers: {
+  //         'Content-Type': 'application/json',
+  //       },
+  //       body: JSON.stringify({ username, password }),
+  //     });
+  
+  //     const data = await response.json();
+  
+  //     if (response.ok) {
+  //       alert(data.message);
+  //     } else {
+  //       alert(data.message);
+  //     }
+  //   } catch (error) {
+  //     console.error('Error:', error);
+  //   }
+  // };
+  
+  const handleSubmit = async (e) => {
     e.preventDefault();
-
-    // Replace this with your actual authentication logic
-    if (username === 'demo' && password === 'password') {
-      alert('Login successful!');
-    } else {
-      alert('Invalid username or password');
+  
+    try {
+      const response = await fetch('http://localhost:5000/api/login', {
+        method: 'POST',  // Make sure it's a POST request
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ username, password }),
+      });
+  
+      const data = await response.json();
+  
+      if (response.ok) {
+        alert(data.message);
+      } else {
+        alert(data.message);
+      }
+    } catch (error) {
+      console.error('Error:', error);
     }
   };
+  
 
   return (
     <div className="login-container">
