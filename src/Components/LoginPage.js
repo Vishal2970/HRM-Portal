@@ -1,26 +1,29 @@
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import './LoginPage.css'; // Import your CSS file for styling
 
 const LoginPage = () => {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
-   
+  const navigate = useNavigate();
+
   const handleSubmit = async (e) => {
     e.preventDefault();
-  
+
     try {
       const response = await fetch('http://localhost:5000/api/login', {
-        method: 'POST',  // Make sure it's a POST request
+        method: 'POST',
         headers: {
           'Content-Type': 'application/json',
         },
         body: JSON.stringify({ username, password }),
       });
-  
+
       const data = await response.json();
-  
+
       if (response.ok) {
         alert(data.message);
+        navigate('/report');
       } else {
         alert(data.message);
       }
@@ -28,7 +31,6 @@ const LoginPage = () => {
       console.error('Error:', error);
     }
   };
-  
 
   return (
     <div className="login-container">
