@@ -23,6 +23,7 @@ const LoginPage = () => {
 
       if (response.ok) {
         alert(data.message);
+        // Redirect to the Report.js page after successful login
         navigate('/report');
       } else {
         alert(data.message);
