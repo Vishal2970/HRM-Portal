@@ -1,0 +1,15 @@
+npm i nodemon
+npm i env   for env
+npm i bcrypt  for hashing password
+npm i mongoose
+npm i express
+npm i jsonwebtoken
+npm i zod
+
+
+
+ENV
+MONGODB_URI =mongodb+srv://vishalagraharibasti:A123@cluster0.fwudeea.mongodb.net/mern_admin?retryWrites=true&w=majority
+JWT_SECRET_KEY=vishal7570agrahari8829basti70
+
+npm i cors
