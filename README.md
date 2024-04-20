@@ -12,6 +12,7 @@ This project is a web reporting application that allows users to access and view
 
 ## Technologies Used
 
+
 - **Frontend:** React
 - **Backend:** Express, Node.js
 - **Database:** SQL (Specify the database system you're using, e.g., MySQL, PostgreSQL)
